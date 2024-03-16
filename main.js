@@ -261,25 +261,25 @@
 
 // promise creation
 
-// function dataFetcher() {
-//   return new Promise((resolve, rejected) => {
-//     setTimeout(() => {
-//       resolve("data fetching done");
-//     }, 1000);
-//   });
-// }
+function dataFetcher() {
+  return new Promise((resolve, rejected) => {
+    setTimeout(() => {
+      resolve("data fetching done");
+    }, 1000);
+  });
+}
 
-// function display(promiseOneValue) {
-//   return new Promise((resolve, rejected) => {
-//     setTimeout(() => {
-//       resolve("your data is displayed" + promiseOneValue);
-//     }, 1000);
-//   });
-// }
+function display(promiseOneValue) {
+  return new Promise((resolve, rejected) => {
+    setTimeout(() => {
+      resolve("your data is displayed" + promiseOneValue);
+    }, 1000);
+  });
+}
 
-// function finalData(finalData) {
-//   return "our final dtata" + finalData;
-// }
+function finalData(finalData) {
+  return "our final dtata" + finalData;
+}
 
 // // promise consuming
 
@@ -305,29 +305,29 @@
 
 // ======================================================================
 
-function data() {
-  return new Promise((resolve, rejected) => {
-    setTimeout(() => {
-      resolve("=======> this is my data <=======");
-    }, 2000);
-  });
-}
+// function data() {
+//   return new Promise((resolve, rejected) => {
+//     setTimeout(() => {
+//       resolve("=======> this is my data <=======");
+//     }, 2000);
+//   });
+// }
 
-function diplay() {
-  return new Promise((resolve, rejected) => {
-    setTimeout(() => {
-      resolve("==>> data displayed <<==");
-    }, 1000);
-  });
-}
+// function diplay() {
+//   return new Promise((resolve, rejected) => {
+//     setTimeout(() => {
+//       resolve("==>> data displayed <<==");
+//     }, 1000);
+//   });
+// }
 
-data()
-  .then((dta) => {
-    return diplay(dta);
-  })
-  .then((displayedData) => {
-    console.log(displayedData);
-  });
+// data()
+//   .then((dta) => {
+//     return diplay(dta);
+//   })
+//   .then((displayedData) => {
+//     console.log(displayedData);
+//   });
 
 // =============================================================
 
