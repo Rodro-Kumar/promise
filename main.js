@@ -261,47 +261,47 @@
 
 // promise creation
 
-function dataFetcher() {
-  return new Promise((resolve, rejected) => {
-    setTimeout(() => {
-      resolve("data fetching done");
-    }, 1000);
-  });
-}
-
-function display(promiseOneValue) {
-  return new Promise((resolve, rejected) => {
-    setTimeout(() => {
-      resolve("your data is displayed" + promiseOneValue);
-    }, 1000);
-  });
-}
-
-function finalData(finalData) {
-  return "our final dtata" + finalData;
-}
-
-// // promise consuming
-
-// dataFetcher()
-//   .then((value) => {
-//     return display(value);
-//   })
-//   .then((finalValue) => {
-//     return finalValue;
-//   })
-//   .then((finalAGinvalue) => {
-//     return finalData(finalAGinvalue);
-//   })
-//   .then((returnData) => {
-//     console.log(returnData);
-//   })
-//   .catch((err) => {
-//     console.log(err);
-//   })
-//   .finally(() => {
-//     console.log("all task complete");
+// function dataFetcher() {
+//   return new Promise((resolve, rejected) => {
+//     setTimeout(() => {
+//       resolve("data fetching done");
+//     }, 1000);
 //   });
+// }
+
+// function display(promiseOneValue) {
+//   return new Promise((resolve, rejected) => {
+//     setTimeout(() => {
+//       resolve("your data is displayed" + promiseOneValue);
+//     }, 1000);
+//   });
+// }
+
+// function finalData(finalData) {
+//   return "our final dtata" + finalData;
+// }
+
+// promise consuming
+
+dataFetcher()
+  .then((value) => {
+    return display(value);
+  })
+  .then((finalValue) => {
+    return finalValue;
+  })
+  .then((finalAGinvalue) => {
+    return finalData(finalAGinvalue);
+  })
+  .then((returnData) => {
+    console.log(returnData);
+  })
+  .catch((err) => {
+    console.log(err);
+  })
+  .finally(() => {
+    console.log("all task complete");
+  });
 
 // ======================================================================
 
