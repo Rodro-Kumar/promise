@@ -305,49 +305,49 @@
 
 // ======================================================================
 
-// function data() {
-//   return new Promise((resolve, rejected) => {
-//     setTimeout(() => {
-//       resolve("=======> this is my data <=======");
-//     }, 2000);
-//   });
-// }
+function data() {
+  return new Promise((resolve, rejected) => {
+    setTimeout(() => {
+      resolve("=======> this is my data <=======");
+    }, 2000);
+  });
+}
 
-// function diplay() {
-//   return new Promise((resolve, rejected) => {
-//     setTimeout(() => {
-//       resolve("==>> data displayed <<==");
-//     }, 1000);
-//   });
-// }
+function diplay() {
+  return new Promise((resolve, rejected) => {
+    setTimeout(() => {
+      resolve("==>> data displayed <<==");
+    }, 1000);
+  });
+}
 
-// data()
-//   .then((dta) => {
-//     return diplay(dta);
-//   })
-//   .then((displayedData) => {
-//     console.log(displayedData);
-//   });
+data()
+  .then((dta) => {
+    return diplay(dta);
+  })
+  .then((displayedData) => {
+    console.log(displayedData);
+  });
 
 // =============================================================
 
 // fetch api
 
-const api = "https://dummyjson.com/products";
+// const api = "https://dummyjson.com/products";
 
-fetch(api)
-  .then((response) => {
-    return response;
-  })
-  .then((data) => {
-    return data.json();
-  })
-  .then((returnData) => {
-    return returnData.products;
-  })
-  .then((allData) => {
-    console.log(allData[0]);
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+// fetch(api)
+//   .then((response) => {
+//     return response;
+//   })
+//   .then((data) => {
+//     return data.json();
+//   })
+//   .then((returnData) => {
+//     return returnData.products;
+//   })
+//   .then((allData) => {
+//     console.log(allData[0]);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
