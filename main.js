@@ -239,23 +239,23 @@
 //     console.log(err);
 //   });
 
-// // todo : promise creation
+// todo : promise creation
 
-// const myPromise = new Promise(function (resolve, rejected) {
-//   setTimeout(() => {
-//     resolve("data here");
-//   }, 2000);
-// });
+const myPromise = new Promise(function (resolve, rejected) {
+  setTimeout(() => {
+    resolve("data here");
+  }, 2000);
+});
 
-// // todo : promise consume
+// todo : promise consume
 
-// myPromise
-//   .then((dta) => {
-//     console.log(dta);
-//   })
-//   .catch((err) => {
-//     console.log(err);
-//   });
+myPromise
+  .then((dta) => {
+    console.log(dta);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 
 // =======================================================
 
@@ -283,25 +283,25 @@
 
 // promise consuming
 
-dataFetcher()
-  .then((value) => {
-    return display(value);
-  })
-  .then((finalValue) => {
-    return finalValue;
-  })
-  .then((finalAGinvalue) => {
-    return finalData(finalAGinvalue);
-  })
-  .then((returnData) => {
-    console.log(returnData);
-  })
-  .catch((err) => {
-    console.log(err);
-  })
-  .finally(() => {
-    console.log("all task complete");
-  });
+// dataFetcher()
+//   .then((value) => {
+//     return display(value);
+//   })
+//   .then((finalValue) => {
+//     return finalValue;
+//   })
+//   .then((finalAGinvalue) => {
+//     return finalData(finalAGinvalue);
+//   })
+//   .then((returnData) => {
+//     console.log(returnData);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   })
+//   .finally(() => {
+//     console.log("all task complete");
+//   });
 
 // ======================================================================
 
