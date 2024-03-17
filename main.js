@@ -215,47 +215,47 @@
 //     console.log("all task complete");
 //   });
 
-// // todo : fetch
+// todo : fetch
 
-// const api = "https://dummyjson.com/products";
+const api = "https://dummyjson.com/products";
 
-// fetch(api)
-//   .then((response) => {
-//     return response;
-//   })
-//   .then((response) => {
-//     return response.json();
-//   })
-//   .then((jsonData) => {
-//     return jsonData.products;
-//   })
-//   .then((returnData) => {
-//     return returnData;
-//   })
-//   .then((finalData) => {
-//     console.log(finalData[0]);
-//   })
-//   .catch((err) => {
-//     console.log(err);
-//   });
-
-// todo : promise creation
-
-const myPromise = new Promise(function (resolve, rejected) {
-  setTimeout(() => {
-    resolve("data here");
-  }, 2000);
-});
-
-// todo : promise consume
-
-myPromise
-  .then((dta) => {
-    console.log(dta);
+fetch(api)
+  .then((response) => {
+    return response;
+  })
+  .then((response) => {
+    return response.json();
+  })
+  .then((jsonData) => {
+    return jsonData.products;
+  })
+  .then((returnData) => {
+    return returnData;
+  })
+  .then((finalData) => {
+    console.log(finalData[0]);
   })
   .catch((err) => {
     console.log(err);
   });
+
+// // todo : promise creation
+
+// const myPromise = new Promise(function (resolve, rejected) {
+//   setTimeout(() => {
+//     resolve("data here");
+//   }, 2000);
+// });
+
+// // todo : promise consume
+
+// myPromise
+//   .then((dta) => {
+//     console.log(dta);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
 
 // =======================================================
 
