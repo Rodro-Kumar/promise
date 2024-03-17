@@ -4,61 +4,61 @@
 
 // promise creation
 
-// const mypromise = new Promise(function (resolve, rejected) {
-//   setTimeout(() => {
-//     rejected("your data is not fecthing");
-//   }, 100);
-// });
+const mypromise = new Promise(function (resolve, rejected) {
+  setTimeout(() => {
+    rejected("your data is not fecthing");
+  }, 100);
+});
 
 // promise consuming
 
-mypromise
-  .then((value) => {
-    console.log(value);
-  })
-  .catch((error) => {
-    console.log(error);
-  });
+// mypromise
+//   .then((value) => {
+//     console.log(value);
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
 
-function dataFetcher() {
-  return new Promise((resolve, rejected) => {
-    setTimeout(() => {
-      resolve("Data received");
-    }, 2000);
-  });
-}
+// function dataFetcher() {
+//   return new Promise((resolve, rejected) => {
+//     setTimeout(() => {
+//       resolve("Data received");
+//     }, 2000);
+//   });
+// }
 
-function display(promiseOneValue) {
-  return new Promise((resolve, rejected) => {
-    setTimeout(() => {
-      rejected("data is displayed" + promiseOneValue);
-    }, 1000);
-  });
-}
+// function display(promiseOneValue) {
+//   return new Promise((resolve, rejected) => {
+//     setTimeout(() => {
+//       rejected("data is displayed" + promiseOneValue);
+//     }, 1000);
+//   });
+// }
 
-function masala(msa) {
-  return "our final data is" + msa;
-}
+// function masala(msa) {
+//   return "our final data is" + msa;
+// }
 
-dataFetcher()
-  .then((string) => {
-    return display(string);
-  })
-  .then((finalValue) => {
-    return finalValue;
-  })
-  .then((finalagainvalue) => {
-    return masala(finalagainvalue);
-  })
-  .then((output) => {
-    console.log(output);
-  })
-  .catch((err) => {
-    console.log(err);
-  })
-  .finally(() => {
-    console.log("Complete");
-  });
+// dataFetcher()
+//   .then((string) => {
+//     return display(string);
+//   })
+//   .then((finalValue) => {
+//     return finalValue;
+//   })
+//   .then((finalagainvalue) => {
+//     return masala(finalagainvalue);
+//   })
+//   .then((output) => {
+//     console.log(output);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   })
+//   .finally(() => {
+//     console.log("Complete");
+//   });
 
 // fetch js api
 
