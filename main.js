@@ -159,85 +159,85 @@
 // 3 ==> pending
 
 // todo : promise creation
-// const myPromise = new Promise(function (resolve, rejected) {
-//   setTimeout(() => {
-//     resolve("my data");
-//   }, 1000);
-// });
+const myPromise = new Promise(function (resolve, rejected) {
+  setTimeout(() => {
+    resolve("my data");
+  }, 1000);
+});
 
-// // todo : promise consume
+// todo : promise consume
 
-// myPromise
-//   .then((value) => {
-//     console.log(value);
-//   })
-//   .catch((err) => {
-//     console.log("data not fetching", err);
-//   });
-
-// function dataFecther() {
-//   return new Promise((resolve, rejected) => {
-//     setTimeout(() => {
-//       resolve("data fetching done");
-//     }, 2000);
-//   });
-// }
-
-// function display(promiseoneValue) {
-//   return new Promise((resolve, rejected) => {
-//     setTimeout(() => {
-//       resolve("display done" + promiseoneValue);
-//     }, 1000);
-//   });
-// }
-
-// function final(finalData) {
-//   return "our final data" + finalData;
-// }
-
-// dataFecther()
-//   .then((str) => {
-//     return display(str);
-//   })
-//   .then((finalvalue) => {
-//     return finalvalue;
-//   })
-//   .then((finalLast) => {
-//     return final(finalLast);
-//   })
-//   .then((output) => {
-//     console.log(output);
-//   })
-//   .catch((err) => {
-//     console.log(err);
-//   })
-//   .finally(() => {
-//     console.log("all task complete");
-//   });
-
-// todo : fetch
-
-const api = "https://dummyjson.com/products";
-
-fetch(api)
-  .then((response) => {
-    return response;
+myPromise
+  .then((value) => {
+    console.log(value);
   })
-  .then((response) => {
-    return response.json();
+  .catch((err) => {
+    console.log("data not fetching", err);
+  });
+
+function dataFecther() {
+  return new Promise((resolve, rejected) => {
+    setTimeout(() => {
+      resolve("data fetching done");
+    }, 2000);
+  });
+}
+
+function display(promiseoneValue) {
+  return new Promise((resolve, rejected) => {
+    setTimeout(() => {
+      resolve("display done" + promiseoneValue);
+    }, 1000);
+  });
+}
+
+function final(finalData) {
+  return "our final data" + finalData;
+}
+
+dataFecther()
+  .then((str) => {
+    return display(str);
   })
-  .then((jsonData) => {
-    return jsonData.products;
+  .then((finalvalue) => {
+    return finalvalue;
   })
-  .then((returnData) => {
-    return returnData;
+  .then((finalLast) => {
+    return final(finalLast);
   })
-  .then((finalData) => {
-    console.log(finalData[0]);
+  .then((output) => {
+    console.log(output);
   })
   .catch((err) => {
     console.log(err);
+  })
+  .finally(() => {
+    console.log("all task complete");
   });
+
+// // todo : fetch
+
+// const api = "https://dummyjson.com/products";
+
+// fetch(api)
+//   .then((response) => {
+//     return response;
+//   })
+//   .then((response) => {
+//     return response.json();
+//   })
+//   .then((jsonData) => {
+//     return jsonData.products;
+//   })
+//   .then((returnData) => {
+//     return returnData;
+//   })
+//   .then((finalData) => {
+//     console.log(finalData[0]);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
 
 // // todo : promise creation
 
