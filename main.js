@@ -62,96 +62,96 @@
 
 // fetch js api
 
-// const API = "https://dummyjson.com/products";
-// fetch(API)
-//   .then((data) => {
-//     return data;
-//   })
-//   .then((data) => {
-//     return data.json();
-//   })
-//   .then((jsonData) => {
-//     return jsonData.products;
-//   })
-//   .then((returnData) => {
-//     return returnData;
-//   })
-//   .then((finalData) => {
-//     console.log(finalData[0]);
-//   })
-//   .catch((err) => {
-//     console.log(err);
-//   });
-
-// function fetchData() {
-//   return new Promise(function (resolve, rejected) {
-//     fetch("https://dummyjson.com/products")
-//       .then((response) => response.json())
-//       .then((data) => {
-//         resolve(data);
-//       });
-//   });
-// }
-
-// function displayProduct(data) {
-//   console.log("our data is : ", data);
-// }
-
-// fetchData().then((returnData) => {
-//   displayProduct(returnData.products);
-// });
-
-function fun1() {
-  return new Promise((resolve, rejected) => {
-    setTimeout(() => {
-      resolve("Data fetching done from fun1 ");
-    }, 1000);
-  });
-}
-
-function fun2(item) {
-  return new Promise((resolve, rejected) => {
-    let status = true;
-    setTimeout(() => {
-      if (status) {
-        resolve(item + "two ");
-      } else {
-        rejected("rejected fun2");
-      }
-    }, 1000);
-  });
-}
-
-function fun3(item) {
-  return new Promise((resolve, rejected) => {
-    setTimeout(() => {
-      resolve(item + "three ");
-    }, 1000);
-  });
-}
-
-fun1()
-  .then((fun1Data) => {
-    return fun1Data;
+const API = "https://dummyjson.com/products";
+fetch(API)
+  .then((data) => {
+    return data;
   })
-  .then((fun1result) => {
-    return fun2(fun1result);
+  .then((data) => {
+    return data.json();
   })
-  .then((result2) => {
-    return result2;
+  .then((jsonData) => {
+    return jsonData.products;
   })
-  .then((restle3) => {
-    return fun3(restle3);
+  .then((returnData) => {
+    return returnData;
   })
-  .then((final) => {
-    console.log("final ", final);
+  .then((finalData) => {
+    console.log(finalData[0]);
   })
   .catch((err) => {
-    console.log("our error", err);
-  })
-  .finally(() => {
-    console.log("this is final state");
+    console.log(err);
   });
+
+function fetchData() {
+  return new Promise(function (resolve, rejected) {
+    fetch("https://dummyjson.com/products")
+      .then((response) => response.json())
+      .then((data) => {
+        resolve(data);
+      });
+  });
+}
+
+function displayProduct(data) {
+  console.log("our data is : ", data);
+}
+
+fetchData().then((returnData) => {
+  displayProduct(returnData.products);
+});
+
+// function fun1() {
+//   return new Promise((resolve, rejected) => {
+//     setTimeout(() => {
+//       resolve("Data fetching done from fun1 ");
+//     }, 1000);
+//   });
+// }
+
+// function fun2(item) {
+//   return new Promise((resolve, rejected) => {
+//     let status = true;
+//     setTimeout(() => {
+//       if (status) {
+//         resolve(item + "two ");
+//       } else {
+//         rejected("rejected fun2");
+//       }
+//     }, 1000);
+//   });
+// }
+
+// function fun3(item) {
+//   return new Promise((resolve, rejected) => {
+//     setTimeout(() => {
+//       resolve(item + "three ");
+//     }, 1000);
+//   });
+// }
+
+// fun1()
+//   .then((fun1Data) => {
+//     return fun1Data;
+//   })
+//   .then((fun1result) => {
+//     return fun2(fun1result);
+//   })
+//   .then((result2) => {
+//     return result2;
+//   })
+//   .then((restle3) => {
+//     return fun3(restle3);
+//   })
+//   .then((final) => {
+//     console.log("final ", final);
+//   })
+//   .catch((err) => {
+//     console.log("our error", err);
+//   })
+//   .finally(() => {
+//     console.log("this is final state");
+//   });
 
 // // todo: promise
 // // 1 ==> fullfield
