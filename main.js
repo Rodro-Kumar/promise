@@ -10,96 +10,96 @@
 //   }, 100);
 // });
 
-// // promise consuming
+// promise consuming
 
-// mypromise
-//   .then((value) => {
-//     console.log(value);
-//   })
-//   .catch((error) => {
-//     console.log(error);
-//   });
-
-// function dataFetcher() {
-//   return new Promise((resolve, rejected) => {
-//     setTimeout(() => {
-//       resolve("Data received");
-//     }, 2000);
-//   });
-// }
-
-// function display(promiseOneValue) {
-//   return new Promise((resolve, rejected) => {
-//     setTimeout(() => {
-//       rejected("data is displayed" + promiseOneValue);
-//     }, 1000);
-//   });
-// }
-
-// function masala(msa) {
-//   return "our final data is" + msa;
-// }
-
-// dataFetcher()
-//   .then((string) => {
-//     return display(string);
-//   })
-//   .then((finalValue) => {
-//     return finalValue;
-//   })
-//   .then((finalagainvalue) => {
-//     return masala(finalagainvalue);
-//   })
-//   .then((output) => {
-//     console.log(output);
-//   })
-//   .catch((err) => {
-//     console.log(err);
-//   })
-//   .finally(() => {
-//     console.log("Complete");
-//   });
-
-// fetch js api
-
-const API = "https://dummyjson.com/products";
-fetch(API)
-  .then((data) => {
-    return data;
+mypromise
+  .then((value) => {
+    console.log(value);
   })
-  .then((data) => {
-    return data.json();
+  .catch((error) => {
+    console.log(error);
+  });
+
+function dataFetcher() {
+  return new Promise((resolve, rejected) => {
+    setTimeout(() => {
+      resolve("Data received");
+    }, 2000);
+  });
+}
+
+function display(promiseOneValue) {
+  return new Promise((resolve, rejected) => {
+    setTimeout(() => {
+      rejected("data is displayed" + promiseOneValue);
+    }, 1000);
+  });
+}
+
+function masala(msa) {
+  return "our final data is" + msa;
+}
+
+dataFetcher()
+  .then((string) => {
+    return display(string);
   })
-  .then((jsonData) => {
-    return jsonData.products;
+  .then((finalValue) => {
+    return finalValue;
   })
-  .then((returnData) => {
-    return returnData;
+  .then((finalagainvalue) => {
+    return masala(finalagainvalue);
   })
-  .then((finalData) => {
-    console.log(finalData[0]);
+  .then((output) => {
+    console.log(output);
   })
   .catch((err) => {
     console.log(err);
+  })
+  .finally(() => {
+    console.log("Complete");
   });
 
-function fetchData() {
-  return new Promise(function (resolve, rejected) {
-    fetch("https://dummyjson.com/products")
-      .then((response) => response.json())
-      .then((data) => {
-        resolve(data);
-      });
-  });
-}
+// fetch js api
 
-function displayProduct(data) {
-  console.log("our data is : ", data);
-}
+// const API = "https://dummyjson.com/products";
+// fetch(API)
+//   .then((data) => {
+//     return data;
+//   })
+//   .then((data) => {
+//     return data.json();
+//   })
+//   .then((jsonData) => {
+//     return jsonData.products;
+//   })
+//   .then((returnData) => {
+//     return returnData;
+//   })
+//   .then((finalData) => {
+//     console.log(finalData[0]);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
 
-fetchData().then((returnData) => {
-  displayProduct(returnData.products);
-});
+// function fetchData() {
+//   return new Promise(function (resolve, rejected) {
+//     fetch("https://dummyjson.com/products")
+//       .then((response) => response.json())
+//       .then((data) => {
+//         resolve(data);
+//       });
+//   });
+// }
+
+// function displayProduct(data) {
+//   console.log("our data is : ", data);
+// }
+
+// fetchData().then((returnData) => {
+//   displayProduct(returnData.products);
+// });
 
 // function fun1() {
 //   return new Promise((resolve, rejected) => {
