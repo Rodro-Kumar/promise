@@ -101,119 +101,119 @@
 //   displayProduct(returnData.products);
 // });
 
-// function fun1() {
-//   return new Promise((resolve, rejected) => {
-//     setTimeout(() => {
-//       resolve("Data fetching done from fun1 ");
-//     }, 1000);
-//   });
-// }
-
-// function fun2(item) {
-//   return new Promise((resolve, rejected) => {
-//     let status = true;
-//     setTimeout(() => {
-//       if (status) {
-//         resolve(item + "two ");
-//       } else {
-//         rejected("rejected fun2");
-//       }
-//     }, 1000);
-//   });
-// }
-
-// function fun3(item) {
-//   return new Promise((resolve, rejected) => {
-//     setTimeout(() => {
-//       resolve(item + "three ");
-//     }, 1000);
-//   });
-// }
-
-// fun1()
-//   .then((fun1Data) => {
-//     return fun1Data;
-//   })
-//   .then((fun1result) => {
-//     return fun2(fun1result);
-//   })
-//   .then((result2) => {
-//     return result2;
-//   })
-//   .then((restle3) => {
-//     return fun3(restle3);
-//   })
-//   .then((final) => {
-//     console.log("final ", final);
-//   })
-//   .catch((err) => {
-//     console.log("our error", err);
-//   })
-//   .finally(() => {
-//     console.log("this is final state");
-//   });
-
-// todo: promise
-// 1 ==> fullfield
-// 2 ==> rejected
-// 3 ==> pending
-
-// todo : promise creation
-const myPromise = new Promise(function (resolve, rejected) {
-  setTimeout(() => {
-    resolve("my data");
-  }, 1000);
-});
-
-// todo : promise consume
-
-myPromise
-  .then((value) => {
-    console.log(value);
-  })
-  .catch((err) => {
-    console.log("data not fetching", err);
-  });
-
-function dataFecther() {
+function fun1() {
   return new Promise((resolve, rejected) => {
     setTimeout(() => {
-      resolve("data fetching done");
-    }, 2000);
-  });
-}
-
-function display(promiseoneValue) {
-  return new Promise((resolve, rejected) => {
-    setTimeout(() => {
-      resolve("display done" + promiseoneValue);
+      resolve("Data fetching done from fun1 ");
     }, 1000);
   });
 }
 
-function final(finalData) {
-  return "our final data" + finalData;
+function fun2(item) {
+  return new Promise((resolve, rejected) => {
+    let status = true;
+    setTimeout(() => {
+      if (status) {
+        resolve(item + "two ");
+      } else {
+        rejected("rejected fun2");
+      }
+    }, 1000);
+  });
 }
 
-dataFecther()
-  .then((str) => {
-    return display(str);
+function fun3(item) {
+  return new Promise((resolve, rejected) => {
+    setTimeout(() => {
+      resolve(item + "three ");
+    }, 1000);
+  });
+}
+
+fun1()
+  .then((fun1Data) => {
+    return fun1Data;
   })
-  .then((finalvalue) => {
-    return finalvalue;
+  .then((fun1result) => {
+    return fun2(fun1result);
   })
-  .then((finalLast) => {
-    return final(finalLast);
+  .then((result2) => {
+    return result2;
   })
-  .then((output) => {
-    console.log(output);
+  .then((restle3) => {
+    return fun3(restle3);
+  })
+  .then((final) => {
+    console.log("final ", final);
   })
   .catch((err) => {
-    console.log(err);
+    console.log("our error", err);
   })
   .finally(() => {
-    console.log("all task complete");
+    console.log("this is final state");
   });
+
+// // todo: promise
+// // 1 ==> fullfield
+// // 2 ==> rejected
+// // 3 ==> pending
+
+// // todo : promise creation
+// const myPromise = new Promise(function (resolve, rejected) {
+//   setTimeout(() => {
+//     resolve("my data");
+//   }, 1000);
+// });
+
+// // todo : promise consume
+
+// myPromise
+//   .then((value) => {
+//     console.log(value);
+//   })
+//   .catch((err) => {
+//     console.log("data not fetching", err);
+//   });
+
+// function dataFecther() {
+//   return new Promise((resolve, rejected) => {
+//     setTimeout(() => {
+//       resolve("data fetching done");
+//     }, 2000);
+//   });
+// }
+
+// function display(promiseoneValue) {
+//   return new Promise((resolve, rejected) => {
+//     setTimeout(() => {
+//       resolve("display done" + promiseoneValue);
+//     }, 1000);
+//   });
+// }
+
+// function final(finalData) {
+//   return "our final data" + finalData;
+// }
+
+// dataFecther()
+//   .then((str) => {
+//     return display(str);
+//   })
+//   .then((finalvalue) => {
+//     return finalvalue;
+//   })
+//   .then((finalLast) => {
+//     return final(finalLast);
+//   })
+//   .then((output) => {
+//     console.log(output);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   })
+//   .finally(() => {
+//     console.log("all task complete");
+//   });
 
 // // todo : fetch
 
